@@ -2,6 +2,7 @@
 export App from './App/App';
 // export ChatFeathers from './ChatFeathers/ChatFeathers';
 export Home from './Home/Home';
+// export GameApp from './GameApp/GameApp';
 // export Login from './Login/Login';
 // export LoginSuccess from './LoginSuccess/LoginSuccess';
 export NotFound from './NotFound/NotFound';

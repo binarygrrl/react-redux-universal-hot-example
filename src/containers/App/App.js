@@ -117,8 +117,13 @@ class App extends Component {
               <LinkContainer to="/chat">
                 <NavItem>Chat</NavItem>
               </LinkContainer>
+
               <LinkContainer to="/about">
                 <NavItem>About Us</NavItem>
+              </LinkContainer>
+
+              <LinkContainer to="/games">
+                <NavItem>GameApp</NavItem>
               </LinkContainer>
 
               {!user && (
@@ -169,6 +174,7 @@ class App extends Component {
 
           {renderRoutes(route.routes)}
         </div>
+
         <InfoBar />
 
         <div className="well text-center">

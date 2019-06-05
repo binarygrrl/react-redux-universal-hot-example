@@ -3,6 +3,7 @@ import auth from './modules/auth';
 import notifs from './modules/notifs';
 import counter from './modules/counter';
 import info from './modules/info';
+import gameapp from './modules/gameapp';
 
 export default function createReducers(asyncReducers) {
   return {
@@ -15,6 +16,7 @@ export default function createReducers(asyncReducers) {
       counter3: counter
     }),
     info,
+    gameapp,
     ...asyncReducers
   };
 }
