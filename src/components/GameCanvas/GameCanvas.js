@@ -1,25 +1,25 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import { connect } from 'react-redux';
-import { Stage, Shape, Ticker } from "@createjs/easeljs";
+import { Stage, Shape, Ticker } from '@createjs/easeljs';
 
 class GameCanvas extends Component {
   render() {
-    const stage = new Stage("gameCanvas");
+    const stage = new Stage('gameCanvas');
     console.log(stage);
     console.log(stage.canvas);
 
     const circle = new Shape();
-    circle.graphics.beginFill("red").drawCircle(0, 0, 40);
+    circle.graphics.beginFill('red').drawCircle(0, 0, 40);
     const circleB = new Shape();
-    circleB.graphics.beginFill("orange").drawCircle(0, 0, 40);
+    circleB.graphics.beginFill('orange').drawCircle(0, 0, 40);
     const circleC = new Shape();
-    circleC.graphics.beginFill("yellow").drawCircle(0, 0, 40);
+    circleC.graphics.beginFill('yellow').drawCircle(0, 0, 40);
     const circleD = new Shape();
-    circleD.graphics.beginFill("green").drawCircle(0, 0, 40);
+    circleD.graphics.beginFill('green').drawCircle(0, 0, 40);
     const circleE = new Shape();
-    circleE.graphics.beginFill("blue").drawCircle(0, 0, 40);
+    circleE.graphics.beginFill('blue').drawCircle(0, 0, 40);
     const circleF = new Shape();
-    circleF.graphics.beginFill("purple").drawCircle(0, 0, 40);
+    circleF.graphics.beginFill('purple').drawCircle(0, 0, 40);
     // Set position of Shape instance.
     circle.x = circle.y = 50;
     circleB.x = 150;
@@ -44,7 +44,7 @@ class GameCanvas extends Component {
     stage.update();
 
     function handleTick() {
-      if(stage.canvas){
+      if (stage.canvas) {
         // Circle will move 10 units down.
         circle.y += 10;
         // Will cause the circle to wrap back
@@ -86,8 +86,8 @@ class GameCanvas extends Component {
     }
 
     // Update stage will render next frame
-    Ticker.addEventListener("tick", handleTick);
-    //} else return <div className="loading-error">CreateJS Failed to Load</div>
+    Ticker.addEventListener('tick', handleTick);
+    // } else return <div className="loading-error">CreateJS Failed to Load</div>
     return (
       <div className="game">
         <canvas id="gameCanvas" width="700" height="300" />

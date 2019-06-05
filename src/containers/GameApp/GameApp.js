@@ -8,12 +8,11 @@ import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 @provideHooks({
   fetch: ({ store: { dispatch, getState } }) => !isInfoLoaded(getState()) ? dispatch(loadInfo()).catch(() => null) : Promise.resolve()
 })
-
 class GameApp extends Component {
   componentDidMount() {
     console.log('Component Did Mount');
     // This snippet injects the custom script into the head of the document
-    //const createJs = '//code.createjs.com/1.0.0/createjs.min.js';
+    // const createJs = '//code.createjs.com/1.0.0/createjs.min.js';
     const soundJs = '//code.createjs.com/1.0.0/soundjs.min.js';
     const preloadJs = '//code.createjs.com/1.0.0/preloadjs.min.js';
     // const createJs = "../vendor/createjs.1.0.0.min.js";
@@ -26,7 +25,6 @@ class GameApp extends Component {
     preloadScript.type = 'text/javascript';
     preloadScript.src = preloadJs;
     head.appendChild(preloadScript);
-
   }
 
   render() {
