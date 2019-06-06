@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import { Stage, Shape, Ticker } from '@createjs/easeljs';
+import * as cj from '@createjs/easeljs';
 
 class GameCanvas extends Component {
   render() {
     const stage = new Stage('gameCanvas');
     console.log(stage);
     console.log(stage.canvas);
+    console.log(cj);
 
     const circle = new Shape();
     circle.graphics.beginFill('red').drawCircle(0, 0, 40);

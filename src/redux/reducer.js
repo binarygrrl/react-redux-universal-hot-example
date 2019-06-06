@@ -4,6 +4,9 @@ import notifs from './modules/notifs';
 import counter from './modules/counter';
 import info from './modules/info';
 import gameapp from './modules/gameapp';
+import gameSettings from './modules/gameSettings';
+import gameMainSettings from './modules/gameMainSettings';
+import gameTranslations from './modules/gameTranslations';
 
 export default function createReducers(asyncReducers) {
   return {
@@ -17,6 +20,9 @@ export default function createReducers(asyncReducers) {
     }),
     info,
     gameapp,
+    gameSettings,
+    gameMainSettings,
+    gameTranslations,
     ...asyncReducers
   };
 }
